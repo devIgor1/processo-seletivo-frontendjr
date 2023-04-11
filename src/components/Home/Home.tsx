@@ -2,6 +2,10 @@ import { useState } from "react";
 import "./Home.scss";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import Fade from "react-reveal/Fade";
+import Rotate from "react-reveal/Rotate";
+import LightSpeed from "react-reveal/LightSpeed";
+import Roll from "react-reveal/Roll";
 
 export default function Home() {
   const [name, setName] = useState<string>("");
@@ -59,94 +63,104 @@ export default function Home() {
   }
 
   return (
-    <div className="container">
-      <nav>
-        <div className="logo">
-          <a className="name" href="">
-            Happy Farm
-          </a>
-          <img src="logo.png" alt="" />
-        </div>
-        <ul className="nav-list">
-          <li>
-            <a href="#about">About Us</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
+    <Fade duration={2000}>
+      <div className="container">
+        <nav>
+          <div className="logo">
+            <Rotate top left duration={1500}>
+              <a className="name" href="">
+                Happy Farm
+              </a>
+            </Rotate>
+            <img src="logo.png" alt="" />
+          </div>
 
-      <div className="border"></div>
+          <ul className="nav-list">
+            <li>
+              <a href="#about">About Us</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
 
-      <section className="content-section">
-        <h2>
-          "Agriculture is such a rewarding community to be a part of, and will
-          only continue to grow if we work together.” - Kristeena Patsche.
-        </h2>
-        <img src="./content.jpg" alt="content" />
-      </section>
+        <div className="border"></div>
 
-      <div className="border"></div>
+        <section className="content-section">
+          <LightSpeed left duration={1500}>
+            <h2>
+              "Agriculture is such a rewarding community to be a part of, and
+              will only continue to grow if we work together.” - Kristeena
+              Patsche.
+            </h2>
+          </LightSpeed>
+          <img src="./content.jpg" alt="content" />
+        </section>
 
-      <section id="about" className="about-section">
-        <img src="./about.jpg" alt="about" />
-        <div className="about-text">
-          <h1>About us</h1>
+        <div className="border"></div>
 
-          <p>
-            We are <span>Happy Farm</span>, showing people the real meaning of
-            happiness and peace since <span>1975</span>. Here, in addition to
-            enjoying with the family, if you are interested, you will learn
-            about our history, our roots that shaped us to be who we are. Our
-            foods are the best, as we use the best raw materials, such as
-            excellent quality wheat and mineral water.
-          </p>
-        </div>
-      </section>
+        <section id="about" className="about-section">
+          <img src="./about.jpg" alt="about" />
 
-      <div className="border"></div>
+          <div className="about-text">
+            <Roll bottom>
+              <h1>About us</h1>
+              <p>
+                We are <span>Happy Farm</span>, showing people the real meaning
+                of happiness and peace since <span>1975</span>. Here, in
+                addition to enjoying with the family, if you are interested, you
+                will learn about our history, our roots that shaped us to be who
+                we are. Our foods are the best, as we use the best raw
+                materials, such as excellent quality wheat and mineral water.
+              </p>
+            </Roll>
+          </div>
+        </section>
 
-      <section className="contact-session" id="contact">
-        <form className="form" onSubmit={handleSubmit}>
-          <h1>Contact us</h1>
-          <p>
-            If you have any questions, please do not hesitate to contact us
-            using the form below:
-          </p>
-          <label>Name</label>
-          <input
-            placeholder="Your name"
-            type="text"
-            value={name}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setName(e.target.value)
-            }
-          />
-          <label>Email</label>
-          <input
-            placeholder="Your email adress"
-            type="email"
-            value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setEmail(e.target.value)
-            }
-          />
-          <label>Message</label>
-          <textarea
-            placeholder="Your message here..."
-            value={message}
-            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-              setMessage(e.target.value)
-            }
-          />
-          <button type="submit">Send</button>
-        </form>
-      </section>
+        <div className="border"></div>
 
-      <footer>
-        <p>All rights reserved &copy; 2023 || Made by Igor Moraes Rocha</p>
-      </footer>
-    </div>
+        <section className="contact-session" id="contact">
+          <form className="form" onSubmit={handleSubmit}>
+            <h1>Contact us</h1>
+            <p>
+              If you have any questions, please do not hesitate to contact us
+              using the form below:
+            </p>
+            <label>Name</label>
+            <input
+              placeholder="Your name"
+              type="text"
+              value={name}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setName(e.target.value)
+              }
+            />
+            <label>Email</label>
+            <input
+              placeholder="Your email adress"
+              type="email"
+              value={email}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setEmail(e.target.value)
+              }
+            />
+            <label>Message</label>
+            <textarea
+              placeholder="Your message here..."
+              value={message}
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                setMessage(e.target.value)
+              }
+            />
+            <button type="submit">Send</button>
+          </form>
+        </section>
+
+        <footer>
+          <p>All rights reserved &copy; 2023 || Made by Igor Moraes Rocha</p>
+        </footer>
+      </div>
+    </Fade>
   );
 }

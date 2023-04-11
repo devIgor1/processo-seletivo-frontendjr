@@ -72,7 +72,7 @@ nav {
   width: 100%;
   color: #755f49;
   padding: 0 20px;
-  font-size: 40px;
+  font-size: 32px;
   font-family: "Martel", serif;
   font-style: italic;
 }
@@ -577,5 +577,42 @@ footer {
 
   footer {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .logo a {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 30px;
+  }
+
+  .nav-list a {
+    font-size: 23px;
+  }
+
+  .content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .content-section img {
+    width: 70%;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding-bottom: 10px;
+  }
+
+  .content-section h2 {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .about-section h1 {
+    font-size: 20px;
   }
 }

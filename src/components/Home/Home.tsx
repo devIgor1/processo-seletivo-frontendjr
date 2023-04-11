@@ -95,12 +95,12 @@ export default function Home() {
           <h1>About us</h1>
 
           <p>
-            We are Happy Farm, showing people the real meaning of happiness and
-            peace since 1975. Here, in addition to enjoying with the family, if
-            you are interested, you will learn about our history, our roots that
-            shaped us to be who we are. Our foods are the best, as we use the
-            best raw materials, such as excellent quality wheat and mineral
-            water.
+            We are <span>Happy Farm</span>, showing people the real meaning of
+            happiness and peace since <span>1975</span>. Here, in addition to
+            enjoying with the family, if you are interested, you will learn
+            about our history, our roots that shaped us to be who we are. Our
+            foods are the best, as we use the best raw materials, such as
+            excellent quality wheat and mineral water.
           </p>
         </div>
       </section>

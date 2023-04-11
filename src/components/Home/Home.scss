@@ -444,20 +444,25 @@ footer {
 
 @media screen and (max-width: 476px) {
   .logo a {
-    font-size: 20px;
+    font-size: 18px;
   }
+
+  .logo img {
+    width: 25px;
+  }
+
   .nav-list a {
     font-size: 18px;
   }
 
   .content-section h2 {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
 @media screen and (max-width: 399px) {
   .logo a {
-    font-size: 15px;
+    font-size: 19px;
   }
 
   .logo img {
@@ -465,7 +470,7 @@ footer {
   }
 
   .nav-list a {
-    font-size: 13px;
+    font-size: 19px;
   }
 
   .content-section {
@@ -476,10 +481,9 @@ footer {
   }
 
   .content-section img {
-    width: 70%;
+    width: 100%;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
-    padding-bottom: 10px;
   }
 
   .content-section h2 {
@@ -489,6 +493,12 @@ footer {
 
   .about-section h1 {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .logo a {
+    font-size: 18px;
   }
 }
 
@@ -519,6 +529,10 @@ footer {
 
   .form input {
     padding: 10px;
+  }
+
+  footer p {
+    font-size: 12px;
   }
 }
 
@@ -577,42 +591,5 @@ footer {
 
   footer {
     font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 490px) {
-  .logo a {
-    font-size: 20px;
-  }
-
-  .logo img {
-    width: 30px;
-  }
-
-  .nav-list a {
-    font-size: 23px;
-  }
-
-  .content-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .content-section img {
-    width: 70%;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-    padding-bottom: 10px;
-  }
-
-  .content-section h2 {
-    font-size: 13px;
-    padding: 10px;
-  }
-
-  .about-section h1 {
-    font-size: 20px;
   }
 }
